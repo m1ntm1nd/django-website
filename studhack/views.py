@@ -16,5 +16,8 @@ def archive(request, year):
 
     return HttpResponse(f"<h1>Архив по годам</h1><p>{year}</p>")
 
+def index2(request):
+    return render(request, 'studhack/index2.html')
+
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')
