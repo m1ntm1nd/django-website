@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseNotFound
 
+from .models import *
 # Create your views here.
 def index(request):
     return render(request, 'studhack/index.html')
@@ -17,7 +18,15 @@ def archive(request, year):
     return HttpResponse(f"<h1>Архив по годам</h1><p>{year}</p>")
 
 def index2(request):
-    return render(request, 'studhack/index2.html')
+
+    tasks = Tasks.objects.all()
+
+    context = {
+        'tasks' : tasks,
+        # 'p1' : ' Lorem Ipsum Text',
+        # 'p2' : 'tiny ipsum text'
+    }
+    return render(request, 'studhack/index2.html', context=context)
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')
