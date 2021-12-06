@@ -11,5 +11,9 @@ class Tasks(models.Model):
     description = models.TextField()
     stack = models.TextField()
     photo = models.ImageField(upload_to=f"photos/{id}")        
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT)
+
+class Category(models.Model):
+    name = models.CharField(max_length=255)
 
     
