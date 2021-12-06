@@ -11286,3 +11286,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+  .table {
+  width: 100%; /* Ширина таблицы */
+  background: white; /* Цвет фона таблицы */
+  color: white; /* Цвет текста */
+  border-spacing: 1px; /* Расстояние между ячейками */
+ }
