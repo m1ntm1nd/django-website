@@ -31,13 +31,22 @@ def index2(request):
 def index3(request):
 
     participants = Participants.objects.all()
-
     context = {
         'participants' : participants,
         # 'p1' : ' Lorem Ipsum Text',
         # 'p2' : 'tiny ipsum text'
     }
     return render(request, 'studhack/index3.html', context=context)
+
+def index4(request):
+
+    teams = Teams.objects.all()
+    context = {
+        'teams' : teams,
+        # 'p1' : ' Lorem Ipsum Text',
+        # 'p2' : 'tiny ipsum text'
+    }
+    return render(request, 'studhack/index4.html', context=context)
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')
