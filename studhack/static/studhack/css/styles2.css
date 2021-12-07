@@ -11320,6 +11320,6 @@ textarea.form-control-lg {
 .align-right{
 	max-width: 300px;
 	height: auto;
-	float: right;
+	float: left;
 	padding: 0 10px 10px 0;
 }
