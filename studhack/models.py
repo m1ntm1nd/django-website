@@ -11,7 +11,7 @@ class Tasks(models.Model):
     expert = models.CharField(max_length=255)
     brief_descr = models.CharField(max_length=50, default=descr)
     #stack = models.TextField()
-    photo = models.ImageField(upload_to="photos/", verbose_name="Фото", null=True)
+    photo = models.ImageField(upload_to="media/", verbose_name="Фото", null=True)
     #participants = One to Many
     def __str__(self):
         return self.task_name

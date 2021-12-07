@@ -1,0 +1,14 @@
+{% extends 'studhack/base.html' %}
+
+<!-- Page content-->
+{% block content%}        
+<div class="container">
+    <div class="text-center mt-5">
+        <table class="table">
+            {% for team in teams %}
+            <tr><th>{{team.id}}</th><th>{{team.team_name}}</th></tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -7,3 +7,5 @@ from studhack.models import *
 w = Participants.objects.get(pk=1)
 w = Teams.objects.get(pk=1)
 w = Tasks.objects.get(pk=1)
+
+

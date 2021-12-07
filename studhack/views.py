@@ -20,17 +20,20 @@ def archive(request, year):
 def tasks(request):
 
     tasks = Tasks.objects.all()
-    teams = Teams.objects.all()
+    teamsquery = []
+    for item in tasks:
+        teamsquery.append(Teams.objects.filter(task_id=item.id))
+    teamsquery = teamsquery[::-1]
 
     context = {
         'tasks' : tasks,
-        'teams' : teams
+        'teamsquery' : teamsquery
         # 'p1' : ' Lorem Ipsum Text',
         # 'p2' : 'tiny ipsum text'
     }
     return render(request, 'studhack/tasks.html', context=context)
 
-def index3(request):
+def parts(request):
 
     participants = Participants.objects.all()
     context = {
@@ -38,9 +41,9 @@ def index3(request):
         # 'p1' : ' Lorem Ipsum Text',
         # 'p2' : 'tiny ipsum text'
     }
-    return render(request, 'studhack/index3.html', context=context)
+    return render(request, 'studhack/parts.html', context=context)
 
-def index4(request):
+def teams(request):
 
     teams = Teams.objects.all()
     context = {
@@ -48,7 +51,7 @@ def index4(request):
         # 'p1' : ' Lorem Ipsum Text',
         # 'p2' : 'tiny ipsum text'
     }
-    return render(request, 'studhack/index4.html', context=context)
+    return render(request, 'studhack/teams.html', context=context)
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')
