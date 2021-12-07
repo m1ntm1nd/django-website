@@ -5,7 +5,7 @@ from .views import *
 
 urlpatterns = [
     path('', index, name='home'),
-    path('index2', index2, name='about'),
+    path('tasks', tasks, name='tasks'),
     path('index3', index3, name='parts'),
     path('index4', index4, name='teams'),
     path('info/task/<int:task_id>/', info), #http://127.0.0.1:8000/studhack/info/task/1/

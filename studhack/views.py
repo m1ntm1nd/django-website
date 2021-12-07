@@ -17,16 +17,18 @@ def archive(request, year):
 
     return HttpResponse(f"<h1>Архив по годам</h1><p>{year}</p>")
 
-def index2(request):
+def tasks(request):
 
     tasks = Tasks.objects.all()
+    teams = Teams.objects.all()
 
     context = {
         'tasks' : tasks,
+        'teams' : teams
         # 'p1' : ' Lorem Ipsum Text',
         # 'p2' : 'tiny ipsum text'
     }
-    return render(request, 'studhack/index2.html', context=context)
+    return render(request, 'studhack/tasks.html', context=context)
 
 def index3(request):
 

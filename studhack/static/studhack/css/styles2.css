@@ -601,6 +601,7 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  margin-top: 10rem;
 }
 
 .img-thumbnail {
@@ -11238,7 +11239,7 @@ textarea.form-control-lg {
   }
 
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
   }
 
   .fs-4 {
@@ -11292,3 +11293,33 @@ textarea.form-control-lg {
   color: black; /* Цвет текста */
   border-spacing: 1px; /* Расстояние между ячейками */
  }
+
+ .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.align-right{
+	max-width: 300px;
+	height: auto;
+	float: right;
+	padding: 0 10px 10px 0;
+}
