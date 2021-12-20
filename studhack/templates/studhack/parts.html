@@ -1,14 +1,20 @@
 {% extends 'studhack/base.html' %}
 
 <!-- Page content-->
-{% block content%}        
+{% block content%}      
+
 <div class="container">
-    <div class="text-center mt-5">
-        <table class="table">
+    
+        <div class="text-center mt-5">
+            
+          <table class="table" style="margin: 0 100 0 100">
             {% for part in participants %}
-            <tr><th>{{part.id}}</th><th>{{part.full_name}}</th><th>{{part.team}}</th></tr>
+                <tr><th>{{part.id}}</th><th>{{part.full_name}}</th><th>{{part.team}}</th></tr>
             {% endfor %}
-        </table>
+         </table>
+        
+        </div>
     </div>
-</div>
+
+
 {% endblock %}
