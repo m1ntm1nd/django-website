@@ -37,3 +37,14 @@ class Participants(models.Model):
 
     def __str__(self):
         return self.full_name
+
+
+# class Users(models.Model):
+#     creds = models.CharField(max_length=255)
+#     email = models.EmailField(max_length=50) 
+#     nickname = models.CharField(max_length=50)
+#     #password = models.CharField(widget = forms.PasswordInput)
+#     team = models.ForeignKey('Teams', on_delete=models.PROTECT, null=True)
+
+#     def __str__(self):
+#         return self.full_name

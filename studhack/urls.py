@@ -8,6 +8,8 @@ urlpatterns = [
     path('tasks', tasks, name='tasks'),
     path('parts', parts, name='parts'),
     path('teams', teams, name='teams'),
+    path('login', RegisterUser.as_view(), name='login'),
+    path('register', RegisterUser.as_view(), name='register'),
     path('info/task/<int:task_id>/', info), #http://127.0.0.1:8000/studhack/info/task/1/
     re_path(r'^archive/(?P<year>[0-9]{4})/', archive),
 
